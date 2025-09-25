@@ -1,0 +1,139 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+ 
+    background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0');  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps image fixed while scrolling */
+  min-height: 100vh;
+
+}
+.user-view {
+    margin-top: 70px; /* Example: a larger margin for users */
+}
+
+.custom-navbar {
+  background-color: #1D1616; /* dark red/black */
+   font-family: 'Poppins', sans-serif;
+   
+
+  width: 100%;
+  z-index: 1000; 
+}
+
+.custom-navbar .navbar-brand {
+  color: #EEEEEE;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.custom-navbar .nav-link {
+  color: #EEEEEE;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-item{
+    margin-left: -22px;
+}
+
+.nav-link{
+    margin-right: 20px;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #D84040;
+}
+
+/* Underline effect on hover */
+.custom-navbar .nav-link {
+  color: #EEEEEE;
+  font-weight: 400;
+  padding-bottom: 5px;
+
+  /* Underline via background */
+  background-image: linear-gradient(to right, #D84040, #D84040);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0% 2px; /* initial width 0%, height 2px */
+
+  transition: background-size 0.5s ease, color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #D84040;
+  background-size: 100% 2px; /* expand underline to full width */
+}
+
+.fa-solid{
+  margin-right: 10px;
+}
+/* 
+
+
+/* Optional overlay */
+.hero-section {
+  height: 100vh;
+   background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0');  
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#explore {
+  background:white;  /* no color, fully transparent */
+  
+}
