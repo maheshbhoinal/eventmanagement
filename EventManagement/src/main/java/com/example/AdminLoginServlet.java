@@ -44,11 +44,11 @@ public class AdminLoginServlet extends HttpServlet {
 	    	    HttpSession session = request.getSession();
 	    	    session.setAttribute("name", rs.getString("name"));
 	    	    session.setAttribute("role", "admin");
-	    	    response.sendRedirect("admin_home.jsp");
+	    	    response.sendRedirect("/admin_home.jsp");
 	    	} else {
 	    	    HttpSession session = request.getSession();
 	    	    session.setAttribute("loginError", "Admin not found");
-	    	    response.sendRedirect("admin_login.jsp");
+	    	    response.sendRedirect("/admin_login.jsp");
 	    	}
 
 	    	
@@ -61,3 +61,4 @@ public class AdminLoginServlet extends HttpServlet {
 	
 
 }
+
