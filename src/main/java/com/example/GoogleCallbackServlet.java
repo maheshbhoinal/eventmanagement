@@ -25,10 +25,10 @@ import java.util.Collections;
 @WebServlet("/GoogleCallbackServlet")
 public class GoogleCallbackServlet extends HttpServlet {
 
-    private static final String CLIENT_ID = "133711225652-pqaog52ev73tantrkq5qbhmsdv85lhj2.apps.googleusercontent.com";
-    private static final String CLIENT_SECRET = "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";
-    private static final String REDIRECT_URI = "https://eventmanagement-1-161f.onrender.com/GoogleCallbackServlet";
-
+    private static final String CLIENT_ID = "665673737079-6ci6e2jnurs6srrp486en6r9l6ibqui5.apps.googleusercontent.com";
+    private static final String CLIENT_SECRET = "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";
+    private static final String REDIRECT_URI = "https://eventmanagement-2-dbzk.onrender.com/GoogleCallbackServlet";
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -66,8 +66,11 @@ public class GoogleCallbackServlet extends HttpServlet {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-                    Connection con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/Event", "root", "root");
+                    String URL = "jdbc:mysql://mysql-15e14a5-maheshbhoinal-4c5b.j.aivencloud.com:19200/defaultdb?ssl-mode=REQUIRED";
+        	    	String USERNAME = "avnadmin";
+        	    	String PASSWORD = "AVNS_hyfbdDL-q3L0YCM0n3N";
+        	    	
+                    Connection con = DriverManager.getConnection(URL,USERNAME,PASSWORD);
 
                     PreparedStatement selectPs = con.prepareStatement("SELECT * FROM users WHERE email=?");
                     selectPs.setString(1, email);

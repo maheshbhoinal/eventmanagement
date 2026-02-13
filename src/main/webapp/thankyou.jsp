@@ -39,7 +39,7 @@
 
     <div class="container thankyou-container">
         <div class="card shadow-lg">
-            <div class="emoji mb-3">🙏</div>
+            <div class="emoji mb-3">🙏 </div>
             <h2 class="mb-3">Thank You for Your Feedback!</h2>
             <p class="text-muted">We truly appreciate your input. Your feedback helps us improve our events and services.</p>
             <a href="index.jsp" class="btn btn-primary mt-3">Back to Home</a>
@@ -49,4 +49,4 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html>   

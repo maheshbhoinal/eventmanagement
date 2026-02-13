@@ -54,7 +54,7 @@ public class AddEventServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/Event", "root", "root");
+                "jdbc:mysql://mysql-15e14a5-maheshbhoinal-4c5b.j.aivencloud.com:19200/defaultdb?ssl-mode=REQUIRED", "avnadmin", "AVNS_hyfbdDL-q3L0YCM0n3N");
 
             String sql = "INSERT INTO events(name, description, location, event_date, event_time, category, image) "
                        + "VALUES (?, ?, ?, ?, ?, ?, ?)";

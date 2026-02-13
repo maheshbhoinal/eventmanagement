@@ -49,8 +49,12 @@
         <%
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/Event", "root", "root");
+                String URL = "jdbc:mysql://mysql-15e14a5-maheshbhoinal-4c5b.j.aivencloud.com:19200/defaultdb?ssl-mode=REQUIRED";
+    	    	String USERNAME = "avnadmin";
+    	    	String PASSWORD = "AVNS_hyfbdDL-q3L0YCM0n3N";
+    	    	
+                Connection con = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+
                 Statement stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM events");
 
@@ -62,7 +66,7 @@
         %>
         <div class="col-md-4">
             <div class="card h-100 shadow">
-                <img src="Uploads/<%= image %>" class="card-img-top" alt="Event Image" height=200px>
+  <img src="<%= request.getContextPath() %>/Uploads/<%= image %>"  class="card-img-top" height="200">
                 <div class="card-body">
                     <h5 class="card-title"><%= rs.getString("name") %></h5>
                     <p class="card-text"><%= rs.getString("description") %></p>

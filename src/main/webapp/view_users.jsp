@@ -41,7 +41,11 @@
             <%
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event", "root", "root");
+                    String URL = "jdbc:mysql://mysql-15e14a5-maheshbhoinal-4c5b.j.aivencloud.com:19200/defaultdb?ssl-mode=REQUIRED";
+        	    	String USERNAME = "avnadmin";
+        	    	String PASSWORD = "AVNS_hyfbdDL-q3L0YCM0n3N";
+        	    	
+                    Connection con = DriverManager.getConnection(URL,USERNAME,PASSWORD);
 
                     String query = "SELECT id, name, email, phone, created_at FROM users";
                     Statement stmt = con.createStatement();

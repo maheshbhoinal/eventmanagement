@@ -34,7 +34,11 @@
         <%
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event", "root", "root");
+                String URL = "jdbc:mysql://mysql-15e14a5-maheshbhoinal-4c5b.j.aivencloud.com:19200/defaultdb?ssl-mode=REQUIRED";
+    	    	String USERNAME = "avnadmin";
+    	    	String PASSWORD = "AVNS_hyfbdDL-q3L0YCM0n3N";
+    	    	
+                Connection conn = DriverManager.getConnection(URL,USERNAME,PASSWORD);
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM events");
 

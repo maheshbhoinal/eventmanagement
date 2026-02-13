@@ -10,8 +10,9 @@ import jakarta.servlet.*;
 @WebServlet("/GoogleOAuthServlet")
 public class GoogleOAuthServlet extends HttpServlet {
 
-    private static final String CLIENT_ID = "133711225652-pqaog52ev73tantrkq5qbhmsdv85lhj2.apps.googleusercontent.com";
-    private static final String REDIRECT_URI = "https://eventmanagement-1-161f.onrender.com/GoogleCallbackServlet";
+    private static final String CLIENT_ID = "665673737079-6ci6e2jnurs6srrp486en6r9l6ibqui5.apps.googleusercontent.com";
+    private static final String REDIRECT_URI = "https://eventmanagement-2-dbzk.onrender.com/GoogleCallbackServlet";
+    	
     private static final String SCOPE = "email profile";
     private static final String RESPONSE_TYPE = "code";
 
