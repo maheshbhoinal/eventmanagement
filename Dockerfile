@@ -1,14 +1,15 @@
-# Use official Tomcat with Java 21
-FROM tomcat:10.1-jdk21
+# Stage 1: Build WAR using Maven
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 
-# Remove default web apps
-RUN rm -rf /usr/local/tomcat/webapps/*
+WORKDIR /app
+COPY . .
+RUN mvn clean package
 
-# Copy your WAR file into Tomcat
-COPY EventManagement.war /usr/local/tomcat/webapps/ROOT.war
+# Stage 2: Deploy WAR to Tomcat
+FROM tomcat:9.0-jdk17
 
-# Expose Tomcat port
+COPY --from=build /app/target/EventManagement.war /usr/local/tomcat/webapps/ROOT.war
+
 EXPOSE 8080
 
-# Start Tomcat
 CMD ["catalina.sh", "run"]
