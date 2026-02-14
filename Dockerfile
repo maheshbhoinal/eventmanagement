@@ -1,6 +1,10 @@
 FROM tomcat:9.0-jdk17
 
-COPY EventManagement.war /usr/local/tomcat/webapps/ROOT.war
+# Remove default apps (optional but recommended)
+RUN rm -rf /usr/local/tomcat/webapps/*
+
+# Copy your WAR file
+COPY EventManagement.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
