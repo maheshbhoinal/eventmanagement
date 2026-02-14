@@ -52,7 +52,7 @@
 <div style="display:flex">
     <jsp:include page="admin_sidebar.jsp" />
 
-    <div class="container p-4" style="flex-grow: 1;">
+    <div class="container p-4" style=margin-left:240px>
         <h2 class="mb-4">Edit Event</h2>
         <form action="UpdateEventServlet" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<%= id %>" />
